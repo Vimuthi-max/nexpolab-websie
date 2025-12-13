@@ -966,35 +966,66 @@
 
       <!-- Contact Form -->
      <div class="col-lg-8">
-  <form name="contact" method="POST" data-netlify="true" class="php-email-form shadow-sm p-4 rounded" style="transition:0.3s;">
-    <div class="row gy-4">
+  <form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+  class="php-email-form"
+>
+  <!-- Netlify required -->
+  <input type="hidden" name="form-name" value="contact">
+  <input type="hidden" name="bot-field">
 
-      <div class="col-md-6">
-        <input type="text" name="name" class="form-control shadow-sm" placeholder="Your Name" required style="border-radius:0.75rem; padding:0.75rem; transition:0.3s;">
-      </div>
+  <div class="row gy-4">
 
-      <div class="col-md-6">
-        <input type="email" class="form-control shadow-sm" name="email" placeholder="Your Email" required style="border-radius:0.75rem; padding:0.75rem; transition:0.3s;">
-      </div>
-
-      <div class="col-md-12">
-        <input type="text" class="form-control shadow-sm" name="subject" placeholder="Subject" required style="border-radius:0.75rem; padding:0.75rem; transition:0.3s;">
-      </div>
-
-      <div class="col-md-12">
-        <textarea class="form-control shadow-sm" name="message" rows="6" placeholder="Message" required style="border-radius:0.75rem; padding:0.75rem; transition:0.3s;"></textarea>
-      </div>
-
-      <div class="col-md-12 text-center">
-        <div class="loading">Loading</div>
-        <div class="error-message"></div>
-        <div class="sent-message">Your message has been sent. Thank you!</div>
-
-        <button type="submit" class="btn btn-accent shadow-sm" style="border-radius:0.75rem; padding:0.75rem 2rem; transition:0.3s;">Send Message</button>
-      </div>
-
+    <div class="col-md-6">
+      <input
+        type="text"
+        name="name"
+        class="form-control"
+        placeholder="Your Name"
+        required
+      >
     </div>
-  </form>
+
+    <div class="col-md-6">
+      <input
+        type="email"
+        name="email"
+        class="form-control"
+        placeholder="Your Email"
+        required
+      >
+    </div>
+
+    <div class="col-md-12">
+      <input
+        type="text"
+        name="subject"
+        class="form-control"
+        placeholder="Subject"
+        required
+      >
+    </div>
+
+    <div class="col-md-12">
+      <textarea
+        name="message"
+        class="form-control"
+        rows="6"
+        placeholder="Message"
+        required
+      ></textarea>
+    </div>
+
+    <div class="col-md-12 text-center">
+      <button type="submit">Send Message</button>
+    </div>
+
+  </div>
+</form>
+
 </div>
 
 </section><!-- /Contact Section -->
